@@ -6,6 +6,7 @@
     border-collapse: collapse;
 }
 #etlapTable > tbody > tr > td{
+    text-align: center;
     border: 2px solid black;
     border-collapse: collapse;
 }
@@ -20,3 +21,42 @@
     border-bottom: none;
     border-collapse: collapse;
 }
+
+#kedvencekDiv{
+    margin-bottom: 1%;
+}
+
+#kedvencekTable{
+    margin: 0 auto;
+    width: 50%;
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+#kedvencekTable > tbody > tr > td{
+    text-align: center;
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+#kedvencekTable > thead > tr > th{
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+#kedvencekTable > caption{
+    border: 2px solid black;
+    border-bottom: none;
+    border-collapse: collapse;
+}
+
+nav{
+    width:100%;
+    text-align: center;
+    margin-bottom: 1%;
+}
+
+nav>a{
+    display: inline-block;
+    width:18%;
+}
+
