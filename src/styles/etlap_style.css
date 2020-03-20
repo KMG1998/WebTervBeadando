@@ -17,6 +17,7 @@
 }
 
 #etlapTable > caption{
+    font-weight: bold;
     border: 2px solid black;
     border-bottom: none;
     border-collapse: collapse;
@@ -44,6 +45,7 @@
 }
 
 #kedvencekTable > caption{
+    font-weight: bold;
     border: 2px solid black;
     border-bottom: none;
     border-collapse: collapse;
