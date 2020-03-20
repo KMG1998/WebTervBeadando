@@ -1,0 +1,22 @@
+*{}
+
+#etlapTable{
+    width: 100%;
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+#etlapTable > tbody > tr > td{
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+#etlapTable > thead > tr > th{
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+#etlapTable > caption{
+    border: 2px solid black;
+    border-bottom: none;
+    border-collapse: collapse;
+}
