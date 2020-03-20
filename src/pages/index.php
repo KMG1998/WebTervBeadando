@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="HU">
 <head>
 
 </head>
@@ -7,8 +7,6 @@
 <div>
 
 <div/>
-<h1> </h1>
-<hr/>
 <p> Kopanecz Márton és Kiss Máté projektje </p>
 </body>
 </html>
