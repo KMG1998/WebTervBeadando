@@ -22,7 +22,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Prog1/gyak04" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunManager">
@@ -44,6 +44,7 @@
       <workItem from="1583857191104" duration="3880000" />
       <workItem from="1584710410795" duration="2070000" />
       <workItem from="1584721510263" duration="2060000" />
+      <workItem from="1584960954417" duration="259000" />
     </task>
     <servers />
   </component>
@@ -58,10 +59,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="501" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.305.1366.728@0.0.1920.1040" timestamp="1584723372799" />
-    <state x="827" y="277" key="FileChooserDialogImpl" timestamp="1583863366413">
+    <state x="827" y="277" key="FileChooserDialogImpl" timestamp="1584960977689">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="827" y="277" key="FileChooserDialogImpl/0.0.1920.1040/1920.305.1366.728@0.0.1920.1040" timestamp="1583863366412" />
+    <state x="827" y="277" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1584960977689" />
     <state width="1536" height="328" key="GridCell.Tab.0.bottom" timestamp="1584717775786">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -114,9 +116,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="550" y="165" key="SettingsEditor/0.0.1920.1040/1920.305.1366.728@0.0.1920.1040" timestamp="1583866366808" />
-    <state x="661" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1584721510350">
+    <state x="661" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1584960954480">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="661" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.305.1366.728@0.0.1920.1040" timestamp="1584721510350" />
+    <state x="661" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584960954480" />
   </component>
 </project>
