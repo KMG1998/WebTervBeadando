@@ -1,0 +1,74 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url("../képek/faHatter.jpg");
+}
+.content{
+    width: 320px;
+    height: 350px;
+    background: black;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute ;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 0 30px;
+}
+h2{
+    margin: 0;
+    padding: 10px 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+.content input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.content input[type="text"], input[type="password"]{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 15px;
+}
+.content input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #d29c1f;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 10px;
+}
+.content input[type="submit"]:hover{
+    cursor: pointer;
+    background: #f7bf1f;
+    color: black;
+}
+.content a{
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 20px;
+    color: darkgrey;
+}
+.content a:hover{
+    color: orange;
+}
+header{
+    color: white;
+    font-size: 40px;
+    font-family: "Times New Roman";
+    font-weight: bold;
+}
+div h5{
+    margin: 0;
+    padding: 0;
+    color: lightgray;
+    position: absolute;
+    bottom: 5px;
+    right: 1px;
+    font-family: "Times New Roman";
+}

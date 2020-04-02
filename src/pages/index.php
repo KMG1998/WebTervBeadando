@@ -4,26 +4,21 @@
     <title>Nyitó oldal</title>
     <meta charset="UTF-8">
     <meta desciption="KiPa étterem kezdőlap">
+    <link rel="stylesheet" type="text/css" href="../styles/index_style.css">
 </head>
 <body>
-    <header>Kezdőlap</header>
+    <header><i>KiPa</i> kezdőlap</header>
     <div class="content">
-            <form action="login.php" method="post">
-                <label>
-                Felhasználónév:
-                <input type="text" name="username"></label><br>
-                <label>
-                Jelszó:
-                <input type="password" name="password"></label><br>
-                <input type="submit" value="Bejelentkezés">
-            </form>
-        </div>
-    <p>Amennyiben nincs fiókja, készítsen egyet</p>
-    <nav>
-        <a href="regisztracio.php">regisztráció</a>
-    </nav>
-    <footer>
-    <h2>Kopanecz Márton és Kiss Máté honlapja</h2>
-    </footer>
+        <form action="login.php" method="post">
+        <h2>Bejelentkezés</h2>
+        <input type="text" name="username" placeholder="felhasználónév"><br>
+        <input type="password" name="password" placeholder="jelszó"><br>
+        <input type="submit" value="Bejelentkezés">
+        </form>
+         <a href="regisztracio.php">Még nincs fiókja?</a>
+    </div>
+    <div>
+    <h5>Kopanecz Márton és Kiss Máté honlapja</h5>
+    </div>
 </body>
 </html>
