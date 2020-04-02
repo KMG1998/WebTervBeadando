@@ -1,30 +1,46 @@
 *{}
 
 #etlapTable{
-    width: 100%;
-    border: 2px solid black;
+    margin: 0 auto;
+    width: 75%;
+    border-top: 1px solid black;
     border-collapse: collapse;
 }
 #etlapTable > tbody > tr > td{
     text-align: center;
-    border: 2px solid black;
+    border-bottom: 1px solid black;
     border-collapse: collapse;
 }
 
 #etlapTable > thead > tr > th{
-    border: 2px solid black;
+    border-bottom: 1px solid black;
     border-collapse: collapse;
 }
 
 #etlapTable > caption{
     font-weight: bold;
-    border: 2px solid black;
-    border-bottom: none;
+    border: none;
     border-collapse: collapse;
 }
 
+.foodName{
+    position: relative;
+    display: inline-block;
+    left: 0;
+    top: 0;
+    font-size: 20px;
+}
+
+.foodDesc{
+    margin-left: 0;
+    font-size: 15px;
+}
+
+
+
 #kedvencekDiv{
     margin-bottom: 1%;
+    margin-top: 3%;
 }
 
 #kedvencekTable{
@@ -52,9 +68,9 @@
 }
 
 nav{
-    width:100%;
+    width:60%;
+    margin: 0 auto;
     text-align: center;
-    margin-bottom: 1%;
 }
 
 nav>a{
