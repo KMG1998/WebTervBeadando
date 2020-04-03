@@ -17,13 +17,20 @@ body{
 }
 h2{
     margin: 0;
-    padding: 10px 0 20px;
+    padding: 10px 0 10px;
     text-align: center;
     font-size: 25px;
 }
 .content input{
     width: 100%;
     margin-bottom: 20px;
+}
+.content label{
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    margin: 10px 0 5px;
+    padding-b: 0;
 }
 .content input[type="text"], input[type="password"]{
     border: none;
@@ -48,22 +55,25 @@ h2{
     background: #f7bf1f;
     color: black;
 }
-.content a{
+.content p[name="vissza"]{
     text-decoration: none;
     font-size: 15px;
     line-height: 20px;
     color: darkgrey;
 }
+.content a{
+    color: lightgray;
+    text-decoration: underline;
+}
 .content a:hover{
-    color: orange;
+    color: #f7bf1f;
 }
-header{
-    color: white;
-    font-size: 40px;
-    font-family: "Times New Roman";
-    font-weight: bold;
+.content p{
+    color: lightgray;
+    padding-top: 0px;
+    margin: 0;
 }
-div h5{
+h5{
     margin: 0;
     padding: 0;
     color: lightgray;
@@ -72,3 +82,4 @@ div h5{
     right: 1px;
     font-family: "Times New Roman";
 }
+
