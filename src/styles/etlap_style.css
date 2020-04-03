@@ -1,80 +1,157 @@
-*{}
-
-#etlapTable{
-    margin: 0 auto;
-    width: 75%;
-    border-top: 1px solid black;
-    border-collapse: collapse;
-}
-#etlapTable > tbody > tr > td{
-    text-align: center;
-    border-bottom: 1px solid black;
-    border-collapse: collapse;
-}
-
-#etlapTable > thead > tr > th{
-    border-bottom: 1px solid black;
-    border-collapse: collapse;
-}
-
-#etlapTable > caption{
+* {
     font-weight: bold;
-    border: none;
-    border-collapse: collapse;
+    font-family: "Times New Roman";
+    color: #ffffff;
+    box-sizing: border-box;
 }
 
-.foodName{
-    position: relative;
-    display: inline-block;
-    left: 0;
+html,body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-image: url("../pictures/faHatter.jpg");
+}
+
+body{
+    height: 90%;
+}
+
+#kedvencek {
+    margin: 0;
+    padding: 0;
+    width: 15%;
+    height: 90%;
+    position: absolute;
+    overflow: auto;
+    text-align: center;
+    border: 3px solid white;
+}
+
+#mainDiv {
+    display: block;
+    height: 90%;
+}
+
+#mainDiv::after{
+    content: "";
+    background-color: black;
+    opacity: 70%;
     top: 0;
-    font-size: 20px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
 }
 
-.foodDesc{
-    margin-left: 0;
-    font-size: 15px;
+#etlapTable {
+    border-collapse: collapse;
+    float: right;
+    table-layout: fixed;
+    width: 85%;
 }
 
+#etlapTable>tbody{
 
-
-#kedvencekDiv{
-    margin-bottom: 1%;
-    margin-top: 3%;
 }
 
-#kedvencekTable{
-    margin: 0 auto;
+#etlapTable > caption {
+    font-size: 22px;
+    border-bottom: 3px solid white;
+    border-top: 3px solid white;
+    padding-bottom: 0.5%;
+}
+
+#etlapTable > tbody > tr > td {
+    font-size: 22px;
+    border-bottom: 3px solid white;
+    border-top: 3px solid white;
+}
+
+#etlapTable > tbody > tr > td:nth-child(2), #etlapTable > thead > tr > th:nth-child(2) {
+    border-left: 3px solid white;
+    border-right: 3px solid white;
     width: 50%;
-    border: 2px solid black;
+}
+
+#etlapTable > tbody > tr > td:first-of-type, #etlapTable > thead > tr > th:first-of-type {
+    border-left: 3px solid white;
+    border-right: 3px solid white;
+    width: 25%;
+}
+
+#etlapTable > tbody > tr:last-of-type > td {
+    border-bottom: 3px solid white;
+}
+
+#etlapTable > thead > tr > th {
+    font-size: 22px;
+}
+
+#etlapTable > tfoot{
+    border: 3px none white;
+    border-top: 3px solid white;
+    border-bottom-style: solid;
     border-collapse: collapse;
 }
-#kedvencekTable > tbody > tr > td{
+
+#etlapTable > tfoot > tr > td {
     text-align: center;
-    border: 2px solid black;
-    border-collapse: collapse;
+    font-size: 22px;
 }
 
-#kedvencekTable > thead > tr > th{
-    border: 2px solid black;
-    border-collapse: collapse;
+.foodName {
+    text-align: center;
+    font-size: 22px;
 }
 
-#kedvencekTable > caption{
-    font-weight: bold;
-    border: 2px solid black;
-    border-bottom: none;
-    border-collapse: collapse;
+.foodDesc {
+    text-align: center;
+    font-size: 22px;
 }
 
-nav{
-    width:60%;
+.foodPrice {
+    text-align: center;
+    font-size: 22px;
+}
+
+#kosarhozAdDiv {
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: gray;
+    opacity: 40%;
+    z-index: 1;
+}
+
+nav {
+    position: relative;
+    width: 100%;
+    height: 5%;
+    margin-bottom: 1%;
+    text-align: left;
+}
+
+nav > a {
     margin: 0 auto;
-    text-align: center;
+    color: #ffffff;
+    width: 20%;
+    display: inline-block;
+    font-size: 25px;
+    font-weight: bold;
+    padding-top: 0.5%;
+    text-decoration: none;
 }
 
-nav>a{
-    display: inline-block;
-    width:18%;
+nav > a:first-of-type {
+    margin-left: 1%;
+}
+
+nav > a:last-of-type {
+    float: right;
+    text-align: right;
+    margin-right: 1%;
 }
 
