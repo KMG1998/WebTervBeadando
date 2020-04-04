@@ -28,7 +28,8 @@ html {
 }
 
 #adatokDiv, #etelekDiv {
-    border: 3px dashed white;
+    background-image: url("../pictures/pergamen_bg.png");
+    background-size: cover;
     border-radius: 25px;
     display: flex;
     flex-wrap: wrap;
@@ -51,34 +52,59 @@ html {
 
 #adatokDiv > p, #etelekDiv > p {
     display: block;
-    margin: 0 auto;
+    margin: 10px auto;
     font-size: 25px;
     text-align: center;
     width: 100%;
-    color: #ffffff;
+    color: #000000;
 }
 
-#etelekKosarban, #rendeloAdatai {
-    width: 100%;
+#etelekKosarban{
+    width: 75%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
 }
 
-#etelekKosarban > p {
-    color: #ffffff;
+#etelekKosarban > div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#etelekKosarban > div > p {
+    color: #000000;
     font-size: 22px;
     text-align: center;
-    width: 50%;
+    width: 30%;
+    word-wrap: break-spaces;
+}
+
+#etelekKosarban > div > p:last-of-type {
+    cursor: pointer;
 }
 
 #rendeloAdatai > label {
     margin-top: 1%;
     margin-bottom: 1%;
-    color: #ffffff;
+    color: #000000;
     font-size: 22px;
     text-align: center;
     width: 50%;
+}
+
+#fizetoEszkoz{
+    justify-content: space-between;
+}
+
+#fizetoEszkoz > * {
+    font-size: 25px;
+}
+
+#rendeloAdatai {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 #rendeloAdatai > input, #rendeloAdatai > textarea {
@@ -86,7 +112,7 @@ html {
     text-align: center;
     width: 50%;
     border-radius: 25px;
-    border: 3px solid white;
+    border: 3px solid black;
 }
 
 #submitButton {
@@ -94,7 +120,7 @@ html {
     padding: 3px;
     margin-bottom: 1%;
     margin-top: 1%;
-    border: 3px solid white;
+    border: 3px solid black;
     border-radius: 25px;
     background-color: #ffffff;
 }
