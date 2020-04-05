@@ -3,20 +3,32 @@
 <head>
     <meta charset="UTF8">
     <meta description="KiPa étterem étlap">
+    <title>étlap</title>
     <link rel="stylesheet" type="text/css" href="../styles/etlap_style.css">
+    <link rel="stylesheet" type="text/css" href="../styles/menu_style.css">
 </head>
 <body>
 <div id="mainDiv">
-    <nav><a href="etlap.php">étlap</a> <a href="kosar.php">kosár</a> <a
-                href="profil.php">profil</a>
-        <a href="../script/php/logout.php">kijelentkezés</a>
+    <nav>
+        <div id="menuContainer">
+            <ul>
+                <li>
+                    <a href="etlap.html">étlap</a>
+                </li>
+                <li>
+                    <a href="kosar.html">kosár</a>
+                </li>
+                <li>
+                    <a href="profil.html">profil</a>
+                </li>
+                <li>
+                    <a href="../script/php/logOut.php">kijelentkezés</a>
+                </li>
+            </ul>
+        </div>
     </nav>
-    <aside id="kedvencek">
-        <p style="font-size: 18px;font-weight: bold">kedvencek</p>
-        <div><p class="foodName" onclick="showKosarhozAdModal('humusz',1000)">humusz</p><p class="foodPrice">1000</p></div>
-    </aside>
     <div id="kosarhozAdModal">
-        <form id="kosarhozAdForm" action="../script/php/kosarhozAdas.php" method="post">
+        <form id="kosarhozAdForm" action="../script/php/addToCart.php" method="post">
             <label id="kosarhozAdNev" name="nev"></label>
             <label id="kosarhozAdAr"></label>
             <div><label for="kosarhozAdMennyiseg">mennyiség: </label>
@@ -77,7 +89,8 @@
                     <p>600 Ft</p></td>
             </tr>
             <tr class="foodRow">
-                <td class="foodName"><p onclick="showKosarhozAdModal('rakott krumpli zsidó módra',800)">rakott krumpli zsidó módra</p></td>
+                <td class="foodName"><p onclick="showKosarhozAdModal('rakott krumpli zsidó módra',800)">rakott krumpli
+                        zsidó módra</p></td>
                 <td class="foodDesc" colspan="2">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
                     consectetur,
                     adipisci velit
@@ -85,7 +98,8 @@
                 <td class="foodPrice">800 Ft</td>
             </tr>
             <tr class="foodRow">
-                <td class="foodName"><p onclick="showKosarhozAdModal('csirke paprikás bulgurral',800)">csirke paprikás bulgurral</p></td>
+                <td class="foodName"><p onclick="showKosarhozAdModal('csirke paprikás bulgurral',800)">csirke paprikás
+                        bulgurral</p></td>
                 <td class="foodDesc" colspan="2">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
                     consectetur,
                     adipisci velit
@@ -108,6 +122,11 @@
             </tfoot>
         </table>
     </div>
+    <aside id="kedvencek">
+        <p>kedvencek</p>
+        <div><p class="foodName" onclick="showKosarhozAdModal('humusz',1000)">humusz</p>
+            <p class="foodPrice">1000</p></div>
+    </aside>
 </div>
 <script src="../script/JS/etlap_JS.js">
 </script>

@@ -1,6 +1,6 @@
 * {
     font-weight: bold;
-    font-family: "Times New Roman";
+    font-family: "Lucida Console";
 }
 
 html, body {
@@ -21,11 +21,6 @@ html {
     height: 100%;
 }
 
-#orderForm {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
 
 #adatokDiv, #etelekDiv {
     background-image: url("../pictures/pergamen_bg.png");
@@ -36,18 +31,7 @@ html {
     justify-content: center;
     width: 49%;
     height: 100%;
-}
-
-#adatokDiv:after, #etelekDiv:after {
-    content: "";
-    background-color: black;
-    opacity: 0.35;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1;
+    margin-top: 5%;
 }
 
 #adatokDiv > p, #etelekDiv > p {
@@ -59,7 +43,13 @@ html {
     color: #000000;
 }
 
-#etelekKosarban{
+#orderForm {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#etelekKosarban {
     width: 75%;
     display: flex;
     flex-wrap: wrap;
@@ -92,7 +82,7 @@ html {
     width: 50%;
 }
 
-#fizetoEszkoz{
+#fizetoEszkoz {
     justify-content: space-between;
 }
 
@@ -125,32 +115,11 @@ html {
     background-color: #ffffff;
 }
 
-nav {
-    position: relative;
-    width: 100%;
-    height: 5%;
-    text-align: left;
+nav ul li:nth-child(2) a {
+    color: gold;
 }
 
-nav > a {
-    margin: 0 auto;
-    color: #ffffff;
-    width: 20%;
-    display: inline-block;
-    font-size: 25px;
-    font-weight: bold;
-    padding-top: 0.5%;
-    padding-bottom: 0.5%;
-    text-decoration: none;
+nav ul li:nth-child(2) a::before {
+    content: url("../pictures/david-csillag.png");
+    margin-right: 5px;
 }
-
-nav > a:first-of-type {
-    margin-left: 1%;
-}
-
-nav > a:last-of-type {
-    float: right;
-    text-align: right;
-    margin-right: 1%;
-}
-

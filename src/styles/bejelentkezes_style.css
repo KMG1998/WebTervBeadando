@@ -20,10 +20,12 @@ h2{
     padding: 10px 0 20px;
     text-align: center;
     font-size: 25px;
+    font-family: "Lucida Console";
 }
 .content input{
     width: 100%;
     margin-bottom: 20px;
+    font-family: "Lucida Console";
 }
 .content input[type="text"], input[type="password"]{
     border: none;
@@ -53,6 +55,7 @@ h2{
     font-size: 15px;
     line-height: 20px;
     color: darkgrey;
+    font-family: "Lucida Console";
 }
 .content a:hover{
     color: orange;
@@ -60,7 +63,7 @@ h2{
 header{
     color: white;
     font-size: 40px;
-    font-family: "Times New Roman";
+    font-family: "Lucida Console";
     font-weight: bold;
 }
 div h5{
@@ -70,5 +73,6 @@ div h5{
     position: absolute;
     bottom: 5px;
     right: 1px;
-    font-family: "Times New Roman";
+    font-family: "Lucida Console";
+    font-weight: bold;
 }
