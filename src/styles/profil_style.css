@@ -18,7 +18,7 @@ html {
 #content {
     height: 600px;
     width: 400px;
-    margin: 5% auto 0;
+    margin: 10% auto 0;
     background-image: url("../pictures/pergamen_bg.png");
     background-size: cover;
     padding: 0;
@@ -71,6 +71,8 @@ html {
     background-size: cover;
     color: black;
 }
+
+#editModal > form::-webkit-scrollbar { width: 0 !important }
 
 #editKedvencekForm {
     height: 400px;
@@ -161,4 +163,19 @@ nav  ul  li:nth-child(3)  a{
 nav  ul  li:nth-child(3) a::before{
     content: url("../pictures/david-csillag.png");
     margin-right: 5px;
+}
+
+@media screen and (max-width: 1000px){
+    #content{
+        margin-top: 100px;
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 660px){
+    nav ul li:nth-child(3) a::before {
+        content: "";
+    }
+    #editModal > form > *{
+        font-size: 18px;
+    }
 }

@@ -3,16 +3,16 @@
 <head>
     <title>KiPa bejelentkezés</title>
     <meta charset="UTF-8">
-    <meta desciption="KiPa étterem kezdőlap">
+    <meta desciption="KiPa étterem bejelentkezés">
     <link rel="stylesheet" type="text/css" href="../styles/bejelentkezes_style.css">
 </head>
 <body>
     <header><i>KiPa</i> bejelentkezés</header>
     <div class="content">
-        <form action="login.php" method="post">
+        <form action="../script/php/handleLogin.php" method="post">
         <h2>Bejelentkezés</h2>
-        <input type="text" name="username" placeholder="felhasználónév"><br>
-        <input type="password" name="password" placeholder="jelszó"><br>
+        <input type="text" name="username" placeholder="felhasználónév" required="required"><br>
+        <input type="password" name="password" placeholder="jelszó" required="required"><br>
         <input type="submit" value="Bejelentkezés">
         </form>
          <a href="regisztracio.html">Még nincs fiókja?</a>

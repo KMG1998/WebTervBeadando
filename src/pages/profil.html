@@ -34,42 +34,16 @@
     </div>
 </div>
 <div id="editModal">
-    <form method="post" id="editKedvencekForm" action="../script/php/updateFavorites.php">
+    <form method="post" id="editKedvencekForm" action="../script/php/updateFavorites.php" post>
         <div>
             <input type="submit" value="kedvencek mentése">
             <input type="button" onclick="closeEditModal()" value="mégse">
         </div>
         <div><label for="humusz">humusz</label><input type="checkbox" id="humusz" name="humuszAddBox"></div>
-        <div><label for="humusz">humusz</label><input type="checkbox" id="humusz" name="humuszAddBox"></div>
-        <div><label for="humusz">humusz</label><input type="checkbox" id="humusz" name="humuszAddBox"></div>
-        <div><label for="humusz">humusz</label><input type="checkbox" id="humusz" name="humuszAddBox"></div>
-        <div><label for="humusz">humusz</label><input type="checkbox" id="humusz" name="humuszAddBox"></div>
-        <div><label for="humusz">humusz</label><input type="checkbox" id="humusz" name="humuszAddBox"></div>
-        <div><label for="humusz">humusz</label><input type="checkbox" id="humusz" name="humuszAddBox"></div>
-        <div><label for="humusz">humusz</label><input type="checkbox" id="humusz" name="humuszAddBox"></div>
-        <div><label for="humusz">humusz</label><input type="checkbox" id="humusz" name="humuszAddBox"></div>
-        <div><label for="humusz">humusz</label><input type="checkbox" id="humusz" name="humuszAddBox"></div>
-        <div><label for="humusz">humusz</label><input type="checkbox" id="humusz" name="humuszAddBox"></div>
-        <div><label for="humusz">humusz</label><input type="checkbox" id="humusz" name="humuszAddBox"></div>
-        <div><label for="humusz">humusz</label><input type="checkbox" id="humusz" name="humuszAddBox"></div>
-        <div><label for="humusz">humusz</label><input type="checkbox" id="humusz" name="humuszAddBox"></div>
-        <div><label for="humusz">humusz</label><input type="checkbox" id="humusz" name="humuszAddBox"></div>
-        <div><label for="humusz">humusz</label><input type="checkbox" id="humusz" name="humuszAddBox"></div>
-        <div><label for="humusz">humusz</label><input type="checkbox" id="humusz" name="humuszAddBox"></div>
-        <div><label for="humusz">humusz</label><input type="checkbox" id="humusz" name="humuszAddBox"></div>
-        <div><label for="humusz">humusz</label><input type="checkbox" id="humusz" name="humuszAddBox"></div>
-        <div><label for="humusz">humusz</label><input type="checkbox" id="humusz" name="humuszAddBox"></div>
-        <div><label for="humusz">humusz</label><input type="checkbox" id="humusz" name="humuszAddBox"></div>
-        <div><label for="humusz">humusz</label><input type="checkbox" id="humusz" name="humuszAddBox"></div>
-        <div><label for="humusz">humusz</label><input type="checkbox" id="humusz" name="humuszAddBox"></div>
-        <div><label for="humusz">humusz</label><input type="checkbox" id="humusz" name="humuszAddBox"></div>
-        <div><label for="humusz">humusz</label><input type="checkbox" id="humusz" name="humuszAddBox"></div>
-        <div><label for="humusz">humusz</label><input type="checkbox" id="humusz" name="humuszAddBox"></div>
-        <div><label for="humusz">humusz</label><input type="checkbox" id="humusz" name="humuszAddBox"></div>
-        <div><label for="humusz">humusz</label><input type="checkbox" id="humusz" name="humuszAddBox"></div>
-        <div><label for="humusz">humusz</label><input type="checkbox" id="humusz" name="humuszAddBox"></div>
+        <div><label for="falafel">humusz</label><input type="checkbox" id="falafel" name="falafelAddBox"></div>
+        <!-- elegendő terméknél görgethető-->
     </form>
-    <form method="post" id="editAdatokForm" action="../script/php/updateUserData.php">
+    <form method="post" id="editAdatokForm" action="../script/php/updateUserData.php" method="post">
         <label>kiszállítási cím </label>
         <input type="text" name="cim" value="user_cim" required="required">
         <label>név </label>
@@ -81,7 +55,7 @@
             <input type="button" onclick="closeEditModal()" value="mégse">
         </div>
     </form>
-    <form method="post" id="jelszoCsereForm" action="../script/php/changeUserPassword.php">
+    <form method="post" id="jelszoCsereForm" action="../script/php/changeUserPassword.php" method="post">
         <label>régi jelszó</label>
         <input type="text" name="regiJelszo" required="required">
         <label>új jelszó</label>
