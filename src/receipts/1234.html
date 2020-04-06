@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KiPa étterem számla</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 210mm;
+            height: 297mm;
+        }
+
+        title{
+            font-size: 60px;
+        }
+
+        #receiptContainer {
+            width: 210mm;
+            height: 207.9mm;
+        }
+
+        #data {
+            width: 210mm;
+            height: 89.1mm;
+        }
+
+        table {
+            border: 3px solid black;
+            border-collapse: collapse;
+        }
+
+        caption {
+            border: 3px solid black;
+        }
+
+        tfoot {
+            border-top: 3px solid black;
+        }
+
+        td, th {
+            text-align: center;
+            border: 3px solid black;
+            padding: 1mm;
+        }
+
+        #itemTable {
+            float: left;
+            width: 210mm;
+            margin-top: 5mm;
+        }
+
+        #customerData {
+            float: right;
+            margin-right: 3mm;
+            height: 89.1mm;
+            width: 100mm;
+        }
+
+        #compData {
+            float: left;
+            margin-left: 3mm;
+            height: 89.1mm;
+            width: 100mm;
+        }
+    </style>
+</head>
+<body>
+<div id="data">
+    <table id="compData">
+        <caption>cég adatai</caption>
+        <thead>
+        </thead>
+        <tbody>
+        <tr>
+            <th>név</th>
+            <td>KiPa étterem</td>
+        </tr>
+        <tr>
+            <th>telephely</th>
+            <td>69420 Kukutyin, Bánat utca 1</td>
+        </tr>
+        <tr>
+            <th>telefon</th>
+            <td>+36694207644</td>
+        </tr>
+        </tbody>
+        <tfoot>
+        </tfoot>
+    </table>
+    <table id="customerData">
+        <caption>Megrendelő adatai</caption>
+        <thead>
+        </thead>
+        <tbody>
+        <tr>
+            <th>név</th>
+            <td>User_Name</td>
+        </tr>
+        <tr>
+            <th>szállítási cím</th>
+            <td>69420 Kukutyin, Szeles utca 13</td>
+        </tr>
+        <tr>
+            <th>fizetés módja</th>
+            <td>készpénz</td>
+        </tr>
+        </tbody>
+        <tfoot>
+        </tfoot>
+    </table>
+</div>
+<div id="receiptContainer">
+    <table id="itemTable">
+        <caption>termékek</caption>
+        <thead>
+        <tr>
+            <th>név</th>
+            <th>egységár</th>
+            <th>mennyiség</th>
+            <th>összeg</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>falafel</td>
+            <td>800 Ft</td>
+            <td>1</td>
+            <td>800 Ft</td>
+        </tr>
+        <tr>
+            <td>humusz</td>
+            <td>1000 Ft</td>
+            <td>1</td>
+            <td>1000 Ft</td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="3">összesen</td>
+            <td>1800 Ft</td>
+        </tr>
+        </tfoot>
+    </table>
+</div>
+</body>
+</html>

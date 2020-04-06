@@ -9,14 +9,14 @@
 <body>
 
   <div class="content">
-        <form action="regisztracio.html" method="post">
+        <form action="../script/php/handleRegistration.php" method="post" id="registerPost">
         <h2>Regisztráció</h2>
                 <label>Felhasználónév:
-                <input type="text" name="username" placeholder="Felhasználónév"></label><br>
+                <input type="text" name="username" placeholder="Felhasználónév" required="required"></label><br>
                 <label>Jelszó:<br>
-                <input type="password" name="password" placeholder="jelszó"></label><br>
-                <input type="password" name="passwordRepeat" placeholder="jelszó újra"></label<br>
-                <input type="submit" value="Regisztracio">
+                <input type="password" name="password" placeholder="jelszó" required="required"></label><br>
+                <input type="password" name="passwordRepeat" placeholder="jelszó újra" required="required"></label<br>
+                <button type="submit" value="SubmitBtn" form="registerPost">Regisztráció</button>
                 <p><a href="bejelentkezes.html">Vissza</a> a bejelentkezéshez</p>
         </form>
    </div>
