@@ -1,7 +1,7 @@
 function showKosarhozAdModal(nev,ar) {
         document.getElementById("kosarhozAdModal").style.display = "block";
-        document.getElementById("kosarhozAdNev").innerText = nev;
-        document.getElementById("kosarhozAdAr").innerText = ar + " Ft";
+        document.getElementById("kosarhozAdNev").value = nev;
+        document.getElementById("kosarhozAdAr").value = ar + " Ft";
 }
 
 function closeKosarhozAdModal(){

@@ -1,3 +1,8 @@
+<?php
+session_start();
+require '../script/php/utils.php';
+$_SESSION['userId'] = 1;
+?>
 <!DOCTYPE HTML>
 <html lang="HU">
 <head>
@@ -13,10 +18,10 @@
         <div id="menuContainer">
             <ul>
                 <li>
-                    <a href="etlap.html">étlap</a>
+                    <a href="etlap.php">étlap</a>
                 </li>
                 <li>
-                    <a href="kosar.html">kosár</a>
+                    <a href="kosar.php">kosár</a>
                 </li>
                 <li>
                     <a href="profil.html">profil</a>
@@ -28,9 +33,9 @@
         </div>
     </nav>
     <div id="kosarhozAdModal">
-        <form id="kosarhozAdForm" action="../script/php/addToCart.php" method="post">
-            <label id="kosarhozAdNev" name="nev"></label>
-            <label id="kosarhozAdAr"></label>
+        <form id="kosarhozAdForm" action="../script/php/handleCart.php" method="post">
+            <input type="text" id="kosarhozAdNev" name="nev" readonly>
+            <input type="text" id="kosarhozAdAr" name="ar" readonly>
             <div><label for="kosarhozAdMennyiseg">mennyiség: </label>
                 <select id="kosarhozAdMennyiseg" name="mennyiseg">
                     <option>1</option>
@@ -46,7 +51,7 @@
                 </select>
             </div>
             <div>
-                <input type="submit" value="kosárhoz ad">
+                <input type="submit" value="kosárhoz ad" name="addToCart">
                 <input type="button" value="mégse" onclick="closeKosarhozAdModal()">
             </div>
         </form>
@@ -123,12 +128,10 @@
     </div>
     <aside id="kedvencek">
         <div>
-        <p>kedvencek</p>
-        <p class="foodName" onclick="showKosarhozAdModal('humusz',1000)">humusz</p>
-        <p class="foodName" onclick="showKosarhozAdModal('humusz',1000)">humusz</p>
-        <p class="foodName" onclick="showKosarhozAdModal('humusz',1000)">humusz</p>
-        <p class="foodName" onclick="showKosarhozAdModal('humusz',1000)">humusz</p>
-        <p class="foodName" onclick="showKosarhozAdModal('humusz',1000)">humusz</p>
+            <p>kedvencek</p>
+            <?php
+            fillKedvencekOnEtlap($_SESSION['userId']);
+            ?>
         </div>
     </aside>
 </div>

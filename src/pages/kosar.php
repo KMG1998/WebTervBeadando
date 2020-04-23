@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    require "../script/php/utils.php";
+?>
 <!DOCTYPE HTML>
 <html lang="HU">
 <head>
@@ -16,7 +20,7 @@
                     <a href="etlap.php">étlap</a>
                 </li>
                 <li>
-                    <a href="kosar.html">kosár</a>
+                    <a href="kosar.php">kosár</a>
                 </li>
                 <li>
                     <a href="profil.html">profil</a>
@@ -31,24 +35,9 @@
         <div id="etelekDiv">
             <p>ételek</p>
             <div id="etelekKosarban">
-                <div name="termek1">
-                    <p>bulgur</p>
-                    <p>1</p>
-                    <p>800 Ft</p>
-                    <p onclick="removeTermekFromKosar('termek1')">X</p>
-                </div>
-                <div name="termek2">
-                    <p>csirke paprikás bulgurral</p>
-                    <p>2</p>
-                    <p>2000 Ft</p>
-                    <p onclick="removeTermekFromKosar('termek2')">X</p>
-                </div>
-                <div name=termek3>
-                    <p>kebab</p>
-                    <p>1</p>
-                    <p>1000 Ft</p>
-                    <p onclick="removeTermekFromKosar('termek3')">X</p>
-                </div>
+                <?php
+                fillItemsToCart();
+                ?>
             </div>
         </div>
         <div id="adatokDiv">

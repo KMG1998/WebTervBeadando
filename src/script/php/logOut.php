@@ -1,4 +1,4 @@
 <?php
 session_start();
-$_SESSION.destroy();
-header("Location: pages/bejelentkezes.html");
+session_destroy();
+header("Location: http://localhost/EJ4V7E/pages/bejelentkezes.html");

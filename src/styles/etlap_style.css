@@ -42,7 +42,8 @@ html {
 
 #kedvencek  p {
     font-size: 22px;
-    width: 51%;
+    width: 100%;
+    text-align: center;
 }
 
 #kedvencek p:not(:first-of-type):hover{
