@@ -11,14 +11,11 @@ function fillKedvencekOnEtlap()
         $line = fgetcsv($kedvencekFile);
     } while ($line != false && $line[1] != $_SESSION['userId']);
     $favouriteArray=explode(";",$line[2]);
-    $counter=0;
 
-    do {
-        $favouriteItem = explode(":",$favouriteArray[$counter]);
-        echo("$elementPrefix" . "'$favouriteItem[0]'" . "," . "'$favouriteItem[1]'" . ")>" . $favouriteItem[0] . "</p>");
-        $counter++;
-        $line = fgetcsv($kedvencekFile);
-    } while ($line != false && $line[1] == $_SESSION['userId']);
+    for($i = 0;$i < sizeof($favouriteArray)-1;$i++){
+        $favouriteItem = explode(":",$favouriteArray[$i]);
+        echo("$elementPrefix" . "'$favouriteItem[0]'" . "," . $favouriteItem[1] . ")>" . $favouriteItem[0] . "</p>");
+    }
 
     fclose($kedvencekFile);
 }

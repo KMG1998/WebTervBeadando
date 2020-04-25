@@ -198,6 +198,16 @@ html {
     font-size: 30px;
 }
 
+#kosarhozAdForm >input{
+    display: block;
+    margin: 10px auto;
+    width: 90%;
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    font-size: 30px;
+}
+
 #kosarhozAdForm > label:first-of-type {
     margin-top: 30%;
 }
