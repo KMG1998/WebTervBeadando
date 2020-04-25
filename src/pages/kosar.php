@@ -1,13 +1,12 @@
 <?php
-    session_start();
     require "../script/php/utils.php";
+    checkLoggedInState();
 ?>
 <!DOCTYPE HTML>
 <html lang="HU">
 <head>
     <meta charset="UTF8">
     <title>kosár</title>
-    <meta description="Kipa étterem kosár">
     <link rel="stylesheet" type="text/css" href="../styles/kosar_style.css">
     <link rel="stylesheet" type="text/css" href="../styles/menu_style.css">
 </head>
@@ -23,7 +22,7 @@
                     <a href="kosar.php">kosár</a>
                 </li>
                 <li>
-                    <a href="profil.html">profil</a>
+                    <a href="profil.php">profil</a>
                 </li>
                 <li>
                     <a href="../script/php/logOut.php">kijelentkezés</a>
@@ -43,15 +42,13 @@
         <div id="adatokDiv">
             <p>szállítási adatok</p>
             <div id="fizetoEszkoz">
-                <label for="keszpenz">készpénz</label><input type="radio" id="keszpenz" name="fizeto" checked="checked">
-                <label for="kartya">bankkártya</label><input type="radio" id="kartya" name="fizeto">
+                <label for="keszpenz">készpénz</label><input type="radio" value="készpénz" name="fizeto" checked="checked">
+                <label for="kartya">bankkártya</label><input type="radio" value="bankkártya" name="fizeto">
             </div>
             <div id="rendeloAdatai">
-                <label>cím:</label><input type="text" name="cim" required="required" value="user_cim">
-                <label>telefon:</label><input type="tel" name="telefon" required="required" value="user_tel">
-                <label>név:</label><input type="text" name="nev" required="required" value="user_nev">
-                <label>megjegyzés:</label><textarea form="orderForm" name=""></textarea>
-                <input type="submit" id="submitButton" value="megrendel">
+                <?php
+                fillUserDataToCart();
+                ?>
             </div>
         </div>
     </form>

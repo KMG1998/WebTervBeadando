@@ -1,4 +1,2 @@
-"id","userId","favName","favPrive"
-1,1,"humusz",1000
-2,1,"falafel",800
-3,1,"Kube-leves",800
+"id","userId","favourites"
+1,2,"falafel:800;humusz:1000"

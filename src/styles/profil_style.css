@@ -32,7 +32,7 @@ html {
     border-radius: 25px;
 }
 
-#szerkesztesValaszto > p {
+#szerkesztesValaszto > input {
     width: 90%;
     font-size: 20px;
     border: 3px solid black;
@@ -44,7 +44,7 @@ html {
     text-align: center;
 }
 
-#szerkesztesValaszto > p:hover {
+#szerkesztesValaszto > input:hover {
     cursor: pointer;
     box-shadow: 5px 5px 5px 5px black;
 }
@@ -75,7 +75,7 @@ html {
 #editModal > form::-webkit-scrollbar { width: 0 !important }
 
 #editKedvencekForm {
-    height: 400px;
+    height: 300px;
     width: 400px;
     overflow: auto;
     justify-content: center;

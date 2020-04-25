@@ -1,13 +1,11 @@
 <?php
-session_start();
 require '../script/php/utils.php';
-$_SESSION['userId'] = 1;
+checkLoggedInState();
 ?>
 <!DOCTYPE HTML>
 <html lang="HU">
 <head>
     <meta charset="UTF8">
-    <meta description="KiPa étterem étlap">
     <title>étlap</title>
     <link rel="stylesheet" type="text/css" href="../styles/etlap_style.css">
     <link rel="stylesheet" type="text/css" href="../styles/menu_style.css">
@@ -24,7 +22,7 @@ $_SESSION['userId'] = 1;
                     <a href="kosar.php">kosár</a>
                 </li>
                 <li>
-                    <a href="profil.html">profil</a>
+                    <a href="profil.php">profil</a>
                 </li>
                 <li>
                     <a href="../script/php/logOut.php">kijelentkezés</a>
@@ -51,7 +49,7 @@ $_SESSION['userId'] = 1;
                 </select>
             </div>
             <div>
-                <input type="submit" value="kosárhoz ad" name="addToCart">
+                <input type="submit" name="addToCart" value="kosárhoz ad">
                 <input type="button" value="mégse" onclick="closeKosarhozAdModal()">
             </div>
         </form>
@@ -102,8 +100,7 @@ $_SESSION['userId'] = 1;
                 <td class="foodPrice">800 Ft</td>
             </tr>
             <tr class="foodRow">
-                <td class="foodName"><p onclick="showKosarhozAdModal('csirke paprikás bulgurral',900)">csirke paprikás
-                        bulgurral</p></td>
+                <td class="foodName"><p onclick="showKosarhozAdModal('csirke paprikás',900)">csirke paprikás</p></td>
                 <td class="foodDesc" colspan="2">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
                     consectetur,
                     adipisci velit
@@ -118,6 +115,14 @@ $_SESSION['userId'] = 1;
                 </td>
                 <td class="foodPrice">800 Ft</td>
             </tr>
+            <tr class="foodRow">
+                <td class="foodName"><p onclick="showKosarhozAdModal('Sabich',1200)">Sabich</p></td>
+                <td class="foodDesc" colspan="2">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+                    consectetur,
+                    adipisci velit
+                </td>
+                <td class="foodPrice">1200 Ft</td>
+            </tr>
             </tbody>
             <tfoot>
             <tr>
@@ -130,7 +135,7 @@ $_SESSION['userId'] = 1;
         <div>
             <p>kedvencek</p>
             <?php
-            fillKedvencekOnEtlap($_SESSION['userId']);
+            fillKedvencekOnEtlap();
             ?>
         </div>
     </aside>

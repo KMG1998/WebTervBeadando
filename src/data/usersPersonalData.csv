@@ -1,2 +1,2 @@
-"kedvencId","userId","etelNev"
-1,2,"humusz"
+"Id","userId","userNev","userCim","userTelefon"
+1,2,Jani,Kukutyin,+36301617644
