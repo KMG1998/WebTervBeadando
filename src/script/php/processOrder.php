@@ -25,7 +25,7 @@ function createReciept()
         fputs($receipt, "\t \t \t<td>$item[nev]</td>" . PHP_EOL);
         fputs($receipt, "\t \t \t<td>$egysegar Ft</td>" . PHP_EOL);
         fputs($receipt, "\t \t \t<td>$item[mennyiseg]</td>" . PHP_EOL);
-        fputs($receipt, "\t \t \t<td>$item[ar]</td>" . PHP_EOL);
+        fputs($receipt, "\t \t \t<td>$item[ar]"." Ft"."</td>" . PHP_EOL);
         fputs($receipt, "\t \t</tr>" . PHP_EOL);
     }
      $dateOfOrder =  date("Y-m-d, H:i:s");

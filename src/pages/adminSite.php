@@ -1,25 +1,48 @@
 <!DOCTYPE html>
+<?php
+require ("../script/php/utils.php");
+if(isset($_SESSION['username']) == false || isset($_SESSION['isAdmin']) == false){
+    header("Location: http://localhost/EJ4V7E/pages/bejelentkezes.html");
+}
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>admin site</title>
     <link href="../styles/adminSite_style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="../styles/menu_style.css">
 </head>
 <body>
+<nav>
+    <div id="menuContainer">
+        <ul>
+            <li>
+                <a href="../script/php/logOut.php">kijelentkezés</a>
+            </li>
+        </ul>
+    </div>
+</nav>
 <div id="orderContainer">
     <form action="../script/php/finishOrder.php" id="activeOrdersForm" method="post">
-        <!-- form belső tartalma amit az activeOrders tartalma alapján kell generálni -->
-        <div class="orderDivs">
-            <p>6418</p>
-            <p>falafel 1, kebab 2, paprikás 4</p>
-            <button type="submit" form="activeOrdersForm" formaction="adminSite.php" name="getSzamla" value="6418">számla</button>
-            <button form="activeOrdersForm" name="submitBtn" type="submit" value="1234">kiad</button>
-        </div>
+        <?php
+            $fileHandler=new fileHandler();
+            $ordersFile= $fileHandler->getActiveOrdersFile("r");
+            while ($line = fgetcsv($ordersFile)){
+                if($line[0] == null){
+
+                }
+                else {
+                    echo "<div class=\"orderDivs\">";
+                    echo "<p>$line[0]</p>";
+                    echo "<p>" . str_replace(":", ",", $line[1]) . "</p>";
+                    echo "<button type=\"submit\" form=\"activeOrdersForm\" formaction=\"../script/php/getSzamla.php\" name=\"getSzamla\" value='$line[0]'>számla</button>";
+                    echo "<button form=\"activeOrdersForm\" name=\"submitBtn\" type=\"submit\" value='$line[0]'>kiad</button>";
+                    echo "</div>";
+                }
+            }
+        ?>
     </form>
 </div>
 <script src="../script/JS/adminSite_JS.js"></script>
 </body>
 </html>
-<?php
-    //automatikus számla letöltés a számla gomb megnyomására
-?>

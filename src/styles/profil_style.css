@@ -130,7 +130,7 @@ html {
     margin-top: 40px;
 }
 
-#editAdatokForm  input, #jelszoCsereForm input{
+#editAdatokForm  input, #jelszoCsereForm input, #kepFeltoltForm input{
     display: block;
     width: 90%;
     text-align: center;
@@ -143,7 +143,7 @@ html {
     text-align: center;
 }
 
-#editAdatokForm > label, #jelszoCsereForm > label {
+#editAdatokForm > label, #jelszoCsereForm > label, #jelszoCsereForm > label {
     font-size: 20px;
     display: block;
     width: 50%;
@@ -152,17 +152,27 @@ html {
     padding-bottom: 5px;
 }
 
-#editAdatokForm > label:first-of-type, #jelszoCsereForm > label:first-of-type {
+#editAdatokForm > label:first-of-type, #jelszoCsereForm > label:first-of-type{
     padding-top: 20px;
 }
 
-nav  ul  li:nth-child(3)  a{
-    color: gold;
+#kepFeltoltForm > label:nth-child(1){
+    display: block;
+    text-align: center;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    font-size: 15px;
 }
 
-nav  ul  li:nth-child(3) a::before{
-    content: url("../pictures/david-csillag.png");
-    margin-right: 5px;
+#kepFeltoltForm {
+    height: 400px;
+    width: 400px;
+}
+
+#kepFeltoltForm > div {
+    display: block;
+    margin-top: 40px;
 }
 
 @media screen and (max-width: 1000px){

@@ -8,25 +8,18 @@ checkLoggedInState();
     <meta charset="UTF8">
     <title>étlap</title>
     <link rel="stylesheet" type="text/css" href="../styles/etlap_style.css">
-    <link rel="stylesheet" type="text/css" href="../styles/menu_style.css">
+    <?php
+        echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"../styles/menu_style.css\">";
+    ?>
 </head>
 <body>
 <div id="mainDiv">
     <nav>
         <div id="menuContainer">
             <ul>
-                <li>
-                    <a href="etlap.php">étlap</a>
-                </li>
-                <li>
-                    <a href="kosar.php">kosár</a>
-                </li>
-                <li>
-                    <a href="profil.php">profil</a>
-                </li>
-                <li>
-                    <a href="../script/php/logOut.php">kijelentkezés</a>
-                </li>
+                <?php
+                    generateMenu(1);
+                ?>
             </ul>
         </div>
     </nav>
@@ -60,68 +53,68 @@ checkLoggedInState();
                 <p>kosárhoz adáshoz kattintson az étel nevére</p></caption>
             <thead>
             <tr>
-                <th>név</th>
-                <th colspan="2">jellemzés</th>
-                <th>ár</th>
+                <th id="etelNev">név</th>
+                <th colspan="2" id="etelJell">jellemzés</th>
+                <th id="etelAr">ár</th>
             </tr>
             </thead>
             <tbody>
             <tr class="foodRow">
-                <td class="foodName" onclick="showKosarhozAdModal('falafel',800)"><p>falafel</p></td>
-                <td class="foodDesc" colspan="2">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+                <td class="foodName" headers="etelNev" onclick="showKosarhozAdModal('falafel',800)" ><p>falafel</p></td>
+                <td class="foodDesc" headers="etelJell" colspan="2">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
                     consectetur,
                     adipisci velit
                 </td>
-                <td class="foodPrice">800 Ft</td>
+                <td class="foodPrice" headers="etelAr">800 Ft</td>
             </tr>
             <tr class="foodRow">
-                <td class="foodName"><p onclick="showKosarhozAdModal('humusz',1000)">humusz</p></td>
-                <td class="foodDesc" colspan="2">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+                <td class="foodName" headers="etelNev" ><p onclick="showKosarhozAdModal('humusz',1000)">humusz</p></td>
+                <td class="foodDesc" headers="etelJell" colspan="2">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
                     consectetur,
                     adipisci velit
                 </td>
-                <td class="foodPrice">1000 Ft</td>
+                <td class="foodPrice" headers="etelAr">1000 Ft</td>
             </tr>
             <tr class="foodRowDiscount">
-                <td class="foodName"><p onclick="showKosarhozAdModal('sajtos pizza',600)">sajtos pizza</p></td>
-                <td class="foodDesc" colspan="2">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+                <td class="foodName" headers="etelNev" ><p onclick="showKosarhozAdModal('sajtos pizza',600)"><img src="../pictures/discount_coin.png">sajtos pizza</p></td>
+                <td class="foodDesc" headers="etelJell" colspan="2">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
                     consectetur,
                     adipisci velit
                 </td>
-                <td class="foodPrice"><p>800 Ft</p>
+                <td class="foodPrice" headers="etelAr"><p>800 Ft</p>
                     <p>600 Ft</p></td>
             </tr>
             <tr class="foodRow">
-                <td class="foodName"><p onclick="showKosarhozAdModal('Kube-leves',800)">Kube-leves</p></td>
-                <td class="foodDesc" colspan="2">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+                <td class="foodName" headers="etelNev"><p onclick="showKosarhozAdModal('Kube-leves',800)">Kube-leves</p></td>
+                <td class="foodDesc" headers="etelJell" colspan="2">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
                     consectetur,
                     adipisci velit
                 </td>
-                <td class="foodPrice">800 Ft</td>
+                <td class="foodPrice" headers="etelAr">800 Ft</td>
             </tr>
             <tr class="foodRow">
-                <td class="foodName"><p onclick="showKosarhozAdModal('csirke paprikás',900)">csirke paprikás</p></td>
-                <td class="foodDesc" colspan="2">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+                <td class="foodName" headers="etelNev"><p onclick="showKosarhozAdModal('csirke paprikás',900)">csirke paprikás</p></td>
+                <td class="foodDesc" headers="etelJell" colspan="2">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
                     consectetur,
                     adipisci velit
                 </td>
-                <td class="foodPrice">800 Ft</td>
+                <td class="foodPrice" headers="etelAr">800 Ft</td>
             </tr>
             <tr class="foodRow">
-                <td class="foodName"><p onclick="showKosarhozAdModal('Saksuka',1200)">Saksuka</p></td>
-                <td class="foodDesc" colspan="2">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+                <td class="foodName" headers="etelNev"><p onclick="showKosarhozAdModal('Saksuka',1200)">Saksuka</p></td>
+                <td class="foodDesc" headers="etelJell" colspan="2">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
                     consectetur,
                     adipisci velit
                 </td>
-                <td class="foodPrice">800 Ft</td>
+                <td class="foodPrice" headers="etelAr">800 Ft</td>
             </tr>
             <tr class="foodRow">
-                <td class="foodName"><p onclick="showKosarhozAdModal('Sabich',1200)">Sabich</p></td>
-                <td class="foodDesc" colspan="2">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+                <td class="foodName" headers="etelNev"><p onclick="showKosarhozAdModal('Sabich',1200)">Sabich</p></td>
+                <td class="foodDesc" headers="etelJell" colspan="2">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
                     consectetur,
                     adipisci velit
                 </td>
-                <td class="foodPrice">1200 Ft</td>
+                <td class="foodPrice" headers="etelAr">1200 Ft</td>
             </tr>
             </tbody>
             <tfoot>

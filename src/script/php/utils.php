@@ -6,17 +6,18 @@ function fillKedvencekOnEtlap()
     global $fileHandler;
     $elementPrefix = "<p class=foodName onclick=showKosarhozAdModal(";
     $kedvencekFile = $fileHandler->getFavouritesFile("r");
+    $favouriteArray = null;
     $line = null;
     do {
         $line = fgetcsv($kedvencekFile);
     } while ($line != false && $line[1] != $_SESSION['userId']);
-    $favouriteArray=explode(";",$line[2]);
-
-    for($i = 0;$i < sizeof($favouriteArray)-1;$i++){
-        $favouriteItem = explode(":",$favouriteArray[$i]);
-        echo("$elementPrefix" . "'$favouriteItem[0]'" . "," . $favouriteItem[1] . ")>" . $favouriteItem[0] . "</p>");
+    if ($line != false) {
+        $favouriteArray = explode(";", $line[2]);
+        for ($i = 0; $i < sizeof($favouriteArray) - 1; $i++) {
+            $favouriteItem = explode(":", $favouriteArray[$i]);
+            echo("$elementPrefix" . "'$favouriteItem[0]'" . "," . $favouriteItem[1] . ")>" . $favouriteItem[0] . "</p>");
+        }
     }
-
     fclose($kedvencekFile);
 }
 
@@ -86,11 +87,60 @@ function checkLoggedInState()
     }
 }
 
+function generateMenu($activeMenuItemNumber){
+    $menuString = "";
+    switch ($activeMenuItemNumber){
+        case 1: $menuString =" <li>
+                    <a href=\"etlap.php\" class='active'>étlap</a>
+                </li>
+                <li>
+                    <a href=\"kosar.php\">kosár</a>
+                </li>
+                <li>
+                    <a href=\"profil.php\">profil</a>
+                </li>
+                <li>
+                    <a href=\"../script/php/logOut.php\">kijelentkezés</a>
+                </li>";break;
+        case 2: $menuString="<li>
+                    <a href=\"etlap.php\">étlap</a>
+                </li>
+                <li>
+                    <a href=\"kosar.php\" class='active'>kosár</a>
+                </li>
+                <li>
+                    <a href=\"profil.php\">profil</a>
+                </li>
+                <li>
+                    <a href=\"../script/php/logOut.php\">kijelentkezés</a>
+                </li>";break;
+        case 3: $menuString="<li>
+                    <a href=\"etlap.php\">étlap</a>
+                </li>
+                <li>
+                    <a href=\"kosar.php\">kosár</a>
+                </li>
+                <li>
+                    <a href=\"profil.php\" class='active'>profil</a>
+                </li>
+                <li>
+                    <a href=\"../script/php/logOut.php\">kijelentkezés</a>
+                </li>";break;
+        default:
+    }
+    echo $menuString;
+}
+
 class fileHandler
 {
     public function getUserLoginDataFile($mode)
     {
         return fopen($_SERVER['DOCUMENT_ROOT'] . "/EJ4V7E/data/usersLoginData.csv", $mode);
+    }
+
+    public function getAdminLoginDataFile($mode)
+    {
+        return fopen($_SERVER['DOCUMENT_ROOT'] . "/EJ4V7E/data/adminLoginData.csv", $mode);
     }
 
     public function getUserPersonalDataFile($mode)
@@ -108,7 +158,8 @@ class fileHandler
         return fopen($_SERVER['DOCUMENT_ROOT'] . "/EJ4V7E/data/favourites.csv", $mode);
     }
 
-    public function getFoodsFile($mode){
+    public function getFoodsFile($mode)
+    {
         return fopen($_SERVER['DOCUMENT_ROOT'] . "/EJ4V7E/data/foodsWithPrices.csv", $mode);
     }
 }

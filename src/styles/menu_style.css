@@ -52,6 +52,14 @@ nav a {
     text-decoration: none;
 }
 
+.active{
+    color: gold;
+}
+.active::before{
+    content: url("../pictures/david-csillag.png");
+    margin-right: 5px;
+}
+
 @media screen and (max-width: 660px) {
     nav {
         font-size: 18px;

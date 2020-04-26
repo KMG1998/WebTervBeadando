@@ -8,25 +8,18 @@
     <meta charset="UTF8">
     <title>kosár</title>
     <link rel="stylesheet" type="text/css" href="../styles/kosar_style.css">
-    <link rel="stylesheet" type="text/css" href="../styles/menu_style.css">
+    <?php
+    echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"../styles/menu_style.css\">";
+    ?>
 </head>
 <body>
 <div id="mainDiv">
     <nav>
         <div id="menuContainer">
             <ul>
-                <li>
-                    <a href="etlap.php">étlap</a>
-                </li>
-                <li>
-                    <a href="kosar.php">kosár</a>
-                </li>
-                <li>
-                    <a href="profil.php">profil</a>
-                </li>
-                <li>
-                    <a href="../script/php/logOut.php">kijelentkezés</a>
-                </li>
+                <?php
+                    generateMenu(2);
+                ?>
             </ul>
         </div>
     </nav>

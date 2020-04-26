@@ -154,12 +154,6 @@ html {
     font-size: 22px;
 }
 
-.foodRowDiscount > .foodName > p::before {
-    content: url("../pictures/discount_coin.png");
-    display: inline-block;
-    float: left;
-}
-
 .foodRowDiscount > .foodPrice > p:first-of-type {
     text-decoration: line-through;
     text-decoration-thickness: 3px;
@@ -223,16 +217,6 @@ html {
 #kosarhozAdMennyiseg{
     width: 20%;
     height: 25px;
-}
-
-
-nav ul li:nth-child(1) a {
-    color: gold;
-}
-
-nav ul li:nth-child(1) a::before {
-    content: url("../pictures/david-csillag.png");
-    margin-right: 5px;
 }
 
 @media screen and (max-width: 1350px){

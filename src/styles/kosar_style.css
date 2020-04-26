@@ -119,15 +119,6 @@ html {
     background-color: #ffffff;
 }
 
-nav ul li:nth-child(2) a {
-    color: gold;
-}
-
-nav ul li:nth-child(2) a::before {
-    content: url("../pictures/david-csillag.png");
-    margin-right: 5px;
-}
-
 @media screen and (max-width: 1200px) {
     #adatokDiv, #etelekDiv {
         min-width: 500px;

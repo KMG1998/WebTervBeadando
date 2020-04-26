@@ -8,24 +8,17 @@ checkLoggedInState();
     <meta charset="UTF8">
     <title>profil</title>
     <link rel="stylesheet" type="text/css" href="../styles/profil_style.css">
-    <link rel="stylesheet" type="text/css" href="../styles/menu_style.css">
+    <?php
+     echo "<link rel=\"stylesheet\" type=\"text/css\" href=\"../styles/menu_style.css\">";
+    ?>
 </head>
 <body>
 <nav>
     <div id="menuContainer">
         <ul>
-            <li>
-                <a href="etlap.php">étlap</a>
-            </li>
-            <li>
-                <a href="kosar.php">kosár</a>
-            </li>
-            <li>
-                <a href="profil.php">profil</a>
-            </li>
-            <li>
-                <a href="../script/php/logOut.php">kijelentkezés</a>
-            </li>
+            <?php
+            generateMenu(3);
+            ?>
         </ul>
     </div>
 </nav>
@@ -34,6 +27,7 @@ checkLoggedInState();
         <input type="button" onclick="showEditAdatokModal()" value="Adatok szerkesztése">
         <input type="button" onclick="showEditKedvencekModal()" value="kedvencek szerkesztése">
         <input type="button" onclick="showJelszoCsereModal()" value="Jelszóváltás">
+        <input type="button" onclick="showUploadModal()" value="Kép feltöltése">
     </div>
 </div>
 <div id="editModal">
@@ -66,6 +60,14 @@ checkLoggedInState();
         <div>
             <input type="submit" value="jelszó mentése">
             <input type="button" onclick="closeEditModal()" value="mégse">
+        </div>
+    </form>
+    <form method="post" id="kepFeltoltForm" action="../script/php/uploadPic.php" enctype="multipart/form-data">
+        <label>Tölts fel egy képet kedvenc ételeddel, mi pedig hetente post-oljuk a legjobbakat.</label>
+        <input type="file" name="picture">
+        <div>
+        <input type="submit" value="Kép feltöltése" name="submit">
+        <input type="button" onclick="closeEditModal()" value="mégse">
         </div>
     </form>
 </div>
