@@ -76,3 +76,13 @@ div h5{
     font-family: "Lucida Console";
     font-weight: bold;
 }
+
+footer {
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height:30px;
+    font-size: 25px;
+    color: white;
+    width:100%;
+}
