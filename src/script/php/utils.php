@@ -25,7 +25,7 @@ function fillItemsToCart()
 {
     if (isset($_SESSION['cart'])) {
         foreach ($_SESSION['cart'] as $itemNum => $item) {
-            echo "<div name=termek$itemNum>";
+            echo "<div>";
             echo " <input type='text' name='nev' value='$item[nev]' readonly = 'readonly'>";
             echo " <input type='text' name='mennyiseg' value='$item[mennyiseg]' readonly='readonly'>";
             echo " <input type='text' name='ar' value='$item[ar] Ft' readonly='readonly'>";

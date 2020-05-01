@@ -1,7 +1,6 @@
 <?php
 require "utils.php";
 $fileHandler = new fileHandler();
-session_start();
 
 if(is_numeric($_POST['telefon']) == false || $_POST['telefon'] < 36000000000 || $_POST['telefon'] > 36999999999 ){
     die("Hibás telefonszám formátum");
@@ -13,8 +12,8 @@ function replacePersonalData(){
     global $fileHandler;
     $personalDataOld = getUserPersonalData();
     $personalDataString = file_get_contents($_SERVER['DOCUMENT_ROOT'] . "/EJ4V7E/data/usersPersonalData.csv");
-    $personalDataString = str_replace($personalDataOld[2].",".$personalDataOld[3].",".$personalDataOld[4],
-        $_POST['userNev'].",".$_POST['cim'].",".$_POST['telefon'] ,$personalDataString);
+    $personalDataString = str_replace($personalDataOld[0].",".$personalDataOld[1].",".$personalDataOld[2].",".$personalDataOld[3].",".$personalDataOld[4],
+        $personalDataOld[0].",".$personalDataOld[1].",".$_POST['userNev'].",".$_POST['cim'].",".$_POST['telefon'] ,$personalDataString);
 
     $personalDataFile = $fileHandler -> getUserPersonalDataFile("w");
     fwrite($personalDataFile,$personalDataString);
