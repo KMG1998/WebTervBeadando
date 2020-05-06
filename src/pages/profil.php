@@ -52,11 +52,11 @@ checkLoggedInState();
     </form>
     <form method="post" id="jelszoCsereForm" action="../script/php/changeUserPassword.php" method="post">
         <label>régi jelszó</label>
-        <input type="password" name="regiJelszo" required="required">
+        <input type="password" name="regiJelszo" >
         <label>új jelszó</label>
-        <input type="password" name="ujJelszo" required="required">
+        <input type="password" name="ujJelszo" >
         <label>új jelszó ismét</label>
-        <input type="password" name="ujJelszoIsmet" required="required">
+        <input type="password" name="ujJelszoIsmet" >
         <div>
             <input type="submit" value="jelszó mentése">
             <input type="button" onclick="closeEditModal()" value="mégse">

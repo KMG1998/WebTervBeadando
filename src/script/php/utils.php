@@ -85,6 +85,9 @@ function checkLoggedInState()
     if (isset($_SESSION['username']) == false) {
         header("Location: http://localhost/EJ4V7E/pages/bejelentkezes.html");
     }
+     if (isset( $_SESSION['isAdmin']) == true) {
+            header("Location: http://localhost/EJ4V7E/pages/adminSite.php");
+     }
 }
 
 function generateMenu($activeMenuItemNumber){

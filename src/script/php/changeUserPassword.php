@@ -1,7 +1,10 @@
 <?php
 require "utils.php";
 $fileHandler = new fileHandler();
-session_start();
+
+if($_POST["regiJelszo"] == "" || $_POST["ujJelszo"] == "" || $_POST["ujJelszoIsmet"] == ""){
+die("kitöltetlen adatmezők.");
+}
 
 if($_SESSION['password'] != $_POST['regiJelszo']){
     die("Hibás régi jelszó!");

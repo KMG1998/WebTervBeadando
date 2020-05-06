@@ -24,6 +24,10 @@ function loginProcess($isAdmin)
     $username = $_POST["userEmail"];
     $password = $_POST["password"];
 
+    if($username == "" || $password ==""){
+        die("Töltse ki a bejelentkezési adatokat");
+    }
+
     while ($line = fgetcsv($userData)) {
         if ($line[1] == $username && $line[2] == $password) {
             $_SESSION['username'] = $username;

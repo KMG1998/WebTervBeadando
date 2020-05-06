@@ -19,6 +19,7 @@ if (isset($_POST["submit"])) {
     if($uploadOk == 1) {
         if (move_uploaded_file($_FILES["picture"]["tmp_name"], $target_file)) {
             echo "kép feltöltése sikeres.";
+            unset($__FILES);
         } else {
             echo "Feltöltés sikertelen, próbálja meg újra.";
         }

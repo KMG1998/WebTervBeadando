@@ -2,6 +2,10 @@
 require "utils.php";
 $fileHandler = new fileHandler();
 
+if($_POST["cim"] == "" || $_POST["userNev"] == "" || $_POST["telefon"] == ""){
+die("kitöltetlen adatmezők.");
+}
+
 if(is_numeric($_POST['telefon']) == false || $_POST['telefon'] < 36000000000 || $_POST['telefon'] > 36999999999 ){
     die("Hibás telefonszám formátum");
 }

@@ -1,5 +1,6 @@
 <?php
 require "utils.php";
+
 $fileHandler = new fileHandler();
 define('orderNumber', rand(1, 10000));
 checkUserData();

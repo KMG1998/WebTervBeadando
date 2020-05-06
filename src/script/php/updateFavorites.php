@@ -1,5 +1,8 @@
 <?php
 require "utils.php";
+if(count($_GET) == 0){
+    die("Kérjük válasszon legalább egy kedvencet.");
+}
 $fileHandler = new fileHandler();
 $newFavourites=createNewFavouriteString();
 $favouritesFile = $fileHandler->getFavouritesFile("w");
@@ -11,18 +14,20 @@ function getCurrentFavourites(){
     global $fileHandler;
     $kedvencek = $fileHandler->getFavouritesFile("r");
     $line = null;
-    do {
-        $line = fgetcsv($kedvencek);
-    } while ($line != false && $line[1] != $_SESSION['userId']);
+    while ($line = fgetcsv($kedvencek)){
+        if($line[1] == $_SESSION['userId']){
+            break;
+        }
+    }
     fclose($kedvencek);
-    return $line[2];
+    return $line;
 }
 
 function createNewFavouriteString(){
     global $fileHandler;
     $currentUserFavourites = getCurrentFavourites();
     $currentFavouritesString = file_get_contents($_SERVER['DOCUMENT_ROOT'] . "/EJ4V7E/data/favourites.csv");
-    $newUserFavourites="";
+    $newUserFavourites=$currentUserFavourites[0].",".$currentUserFavourites[1].",";
 
     $foodsFile = $fileHandler -> getFoodsFile("r");
     $foodsArray = null;
@@ -30,6 +35,7 @@ function createNewFavouriteString(){
     while($line=fgetcsv($foodsFile)){
         $foodsArray[] = $line;
     }
+    fclose($foodsFile);
 
     foreach ($_GET as $getParam){
         foreach ($foodsArray as $food){
@@ -38,7 +44,5 @@ function createNewFavouriteString(){
             }
         }
     }
-
-    fclose($foodsFile);
-    return str_replace($currentUserFavourites,$newUserFavourites,$currentFavouritesString);
+    return str_replace($currentUserFavourites[0].",".$currentUserFavourites[1].",".$currentUserFavourites[2],$newUserFavourites,$currentFavouritesString);
 }

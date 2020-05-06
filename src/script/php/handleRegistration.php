@@ -1,6 +1,5 @@
 <?php
 require "utils.php";
-session_start();
 
 $fileHandler = new fileHandler();
 $userData = $fileHandler->getUserLoginDataFile("r");;
@@ -10,6 +9,10 @@ $password2 = $_POST["passwordRepeat"];
 $userId = 0;
 $favId = 0;
 $personalId = 0;
+
+if($username == "" || $password == "" || $password2 == ""){
+    die("kitöltetlen adatmezők.");
+}
 
 if ($password !== $password2){
     die("Nem egyezik a két megadott jelszó!");
@@ -36,8 +39,8 @@ while($line = fgetcsv($userData2)){
 }
 fclose(userData2);
 $userData2 = $fileHandler->getFavouritesFile("a");;
-$userArray = array($favId, $userId,"","");
-fputcsv($userData2, $userArray, ",", '"');
+$userArray = array($favId, $userId,"");
+fputcsv($userData2, $userArray);
 fclose($userData2);
 
 
